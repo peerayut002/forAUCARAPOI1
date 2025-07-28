@@ -1,0 +1,109 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+/*นี่คือสไลด์ที่โชภาพทั้งหมด*/
+.slideshow-container{
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+/*นี่คือรูปภาพที่โชว์ทั้งหมด*/
+.mySlides{
+  display: none;
+  width: auto;
+  height: 1000px;
+  padding: 100px 0;
+} 
+/*นี่คือปุ่มที่ใช้เลื่อนภาพ*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 20px;
+  user-select: none;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.next {
+  right: 0;
+  border-radius: 20px;
+  position: absolute;
+}
+/*ข้อความ*/
+.text{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 8px 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  padding: 8px 12px;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #000000;
+}
+/*fading animation */
+.fade{
+  animation-name: fade;
+  animation-duration:4s;
+  animation-delay: 2s;
+  animation: infinite;
+}
+/*.option{
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation: infinite;
+}*/
+@keyframes example{
+  0% {background-color: red;}
+  25%{background-color: rgb(187, 255, 0);}
+  50% {background-color: burlywood;}
+  75% {background-color: rgb(34, 0, 255);}
+ 100% {background-color: rgb(255, 0, 242);}
+}
+@keyframes fade{
+  0%{background-color: red;}
+  10%{background-color: burlywood;}
+  20%{background-color: rgb(34, 0, 255);}
+  30%{background-color: rgb(255, 0, 242);}
+  40%{background-color: rgb(50, 0, 252);}
+  50%{background-color: rgb(0, 0, 0);}
+  60%{background-color: rgb(187, 255, 0);}
+  70%{background-color: rgb(32, 0, 95);}
+  80%{background-color: rgb(94, 91, 255);}
+  90%{background-color: rgb(120, 113, 133);}
+  100%{background-color: rgb(0, 255, 225);}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
